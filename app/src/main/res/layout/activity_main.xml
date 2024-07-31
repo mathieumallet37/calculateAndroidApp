@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="373dp"
+        android:layout_height="117dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/buttonCalculer"
+        android:layout_width="300dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@color/orange"
+        android:text="@string/calculer_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.047" />
+
+
+    <LinearLayout
+        android:id="@+id/metrageLayout"
+        android:layout_width="320dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="324dp"
+        android:background="@drawable/border_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculer">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:text="@string/métrageTitle"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/buttonCreerMetrage"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/orange"
+            android:text="@string/créer_métrage_btn" />
+
+        <Button
+            android:id="@+id/buttonMetrageRecent"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/orange"
+            android:text="@string/liste_Métrage" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/enseigneLayout"
+        android:layout_width="320dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/metrageLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:text="@string/enseigneTitle"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/buttonCreerEnseigne"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/orange"
+            android:text="@string/créer_enseigne_btn" />
+
+        <Button
+            android:id="@+id/buttonListeEnseigne"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/orange"
+            android:text="@string/liste_enseigne" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

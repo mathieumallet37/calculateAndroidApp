@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Calculate</string>
+    <string name="calculer_btn">Calculer un angle</string>
+    <string name="métrageTitle">Métrage</string>
+    <string name="créer_métrage_btn">Créer Métrage</string>
+    <string name="liste_Métrage">Liste des métrages</string>
+    <string name="enseigneTitle">Enseigne</string>
+    <string name="créer_enseigne_btn">Créer Enseigne</string>
+    <string name="liste_enseigne">Liste des enseignes</string>
+    <string name="retour_btn">Accueil</string>
+
+    <string name="enregistrer_btn">Enregistrer</string>
+</resources>

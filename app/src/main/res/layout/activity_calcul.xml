@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".CalculeActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="373dp"
+        android:layout_height="117dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/calculateButton"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resetButton"
+        app:layout_constraintVertical_bias="0.176" />
+
+    <EditText
+        android:id="@+id/sideA"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/input_bg"
+        android:hint="Côté A"
+        android:inputType="numberDecimal"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/sideC"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/sideB"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_bg"
+        android:hint="Côté C"
+        android:inputType="numberDecimal"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sideB" />
+
+    <EditText
+        android:id="@+id/sideB"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/sideA"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/input_bg"
+        android:hint="Côté B"
+        android:inputType="numberDecimal"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.122"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sideA" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/sideC"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/orange"
+        android:text="Calculer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/calculateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:backgroundTint="@color/orange"
+        android:text="Effacer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toEndOf="@+id/calculateButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/sideC"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/orange"
+        android:text="Retour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultTextView"
+        app:layout_constraintVertical_bias="0.644" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="204dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/sideC"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/triangle" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Exprimer les mesures en millimètre"
+        android:textColor="@color/colorWhite"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sideC" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

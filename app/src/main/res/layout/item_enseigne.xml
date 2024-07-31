@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@drawable/border_white">
+
+    <TableRow>
+        <TextView
+            android:id="@+id/nomEnseigneTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:text="Nom Client"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/nomContactTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:text="Date Metrage"
+            android:layout_gravity="center_vertical"
+
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_awesome"
+            android:textSize="30dp"
+            android:text="\uf044"
+            android:layout_marginRight="5dp"
+
+            android:textColor="@color/orange"/>
+
+        <TextView
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_awesome"
+            android:textSize="30dp"
+            android:text="\uf2ed"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/orange"/>
+
+        <TextView
+            android:id="@+id/eyeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/font_awesome"
+            android:textSize="30dp"
+            android:text="\uf06e"
+            android:textColor="@color/orange"
+            />
+
+    </TableRow>
+
+</TableLayout>
