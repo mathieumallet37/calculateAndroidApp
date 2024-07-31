@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="@color/orange"
-            android:text="@string/créer_métrage_btn" />
+            android:text="@string/créer_métrage" />
 
         <Button
             android:id="@+id/buttonMetrageRecent"
@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:backgroundTint="@color/orange"
-            android:text="@string/créer_enseigne_btn" />
+            android:text="@string/créer_enseigne" />
 
         <Button
             android:id="@+id/buttonListeEnseigne"

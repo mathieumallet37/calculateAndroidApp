@@ -1,13 +1,52 @@
 <resources>
     <string name="app_name">Calculate</string>
+
+    // Strings variables for all activities
+    <string name="accueil_btn">Accueil</string>
+    <string name="créer_enseigne">Créer une Enseigne</string>
+    <string name="créer_métrage">Créer un Métrage</string>
+    <string name="adresse">Adresse</string>
+    <string name="code_postal">Code Postal</string>
+    <string name="ville">Ville</string>
+    <string name="telephone">Téléphone</string>
+
+
+    // Strings variable for activity_main.xml
     <string name="calculer_btn">Calculer un angle</string>
     <string name="métrageTitle">Métrage</string>
-    <string name="créer_métrage_btn">Créer Métrage</string>
-    <string name="liste_Métrage">Liste des métrages</string>
     <string name="enseigneTitle">Enseigne</string>
-    <string name="créer_enseigne_btn">Créer Enseigne</string>
+    <string name="liste_Métrage">Liste des métrages</string>
     <string name="liste_enseigne">Liste des enseignes</string>
-    <string name="retour_btn">Accueil</string>
-
     <string name="enregistrer_btn">Enregistrer</string>
+
+
+    // Strings variable for activity_calcul.xml
+    <string name="sideA">Côté A</string>
+    <string name="sideB">Côté B</string>
+    <string name="sideC">Côté C</string>
+    <string name="calculer_btn_activity">Calculer</string>
+    <string name="clear_btn_calcul_activity">Effacer</string>
+    <string name="label_input_calcul">Exprimer les mesures en millimètre</string>
+
+
+    // Strings variable for activity_creer_enseigne.xml
+    <string name="nom_enseigne">Nom Enseigne</string>
+    <string name="constact_enseigne">Contact</string>
+    <string name="email_contact">Mail contact</string>
+
+    // Strings variable for activity_creer_metrage.xml
+    <string name="nom_client">Nom client</string>
+    <string name="prénom_client">Prénom client</string>
+    <string name="label_switch">Enseigne \nexistante </string>
+
+    //string variables for item_metrage.xml
+    <string name="date_metrage">Date métrage</string>
+    <string name="action">Action</string>
+
+    <string name="empty_enseigne">Aucune enseigne enregistrée</string>
+    <string name="empty_metrage">Aucun métrage enregistré</string>
+
+
+
+
 </resources>

@@ -61,7 +61,7 @@
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/orange"
-        android:text="Retour"
+        android:text="@string/accueil_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
