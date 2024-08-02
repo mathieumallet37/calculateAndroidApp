@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -15,14 +17,22 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mikepenz.iconics.Iconics;
 import com.mikepenz.iconics.typeface.library.fontawesome.FontAwesome;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import fr.avp41.calculate.adapter.MetrageAdapter;
 import fr.avp41.calculate.model.MetrageModel;
 import fr.avp41.calculate.repository.MetrageRepository;
 
 public class ListeMetrageActivity extends AppCompatActivity {
+
+    private int scrollSpeed = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +57,8 @@ public class ListeMetrageActivity extends AppCompatActivity {
         MetrageRepository metrageRepository = new MetrageRepository(this);
         Cursor cursor = metrageRepository.getAllMetrages();
         List<MetrageModel> metrages = new ArrayList<>();
+
+
 
         if (cursor != null) {
             try {

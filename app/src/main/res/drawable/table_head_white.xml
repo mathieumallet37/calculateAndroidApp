@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <stroke android:color="@color/colorWhite" android:width="2dp"/>
-    <corners android:radius="70dp" />
+    <corners android:topLeftRadius="5dp"
+        android:topRightRadius="5dp"/>
     <path android:fillColor="@android:color/transparent" android:pathData="M0,0 L0,100 L100,100 L100,0 Z" />
 </shape>

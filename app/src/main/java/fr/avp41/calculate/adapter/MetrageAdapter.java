@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import fr.avp41.calculate.DbHandler;
@@ -41,7 +43,9 @@ public class MetrageAdapter extends RecyclerView.Adapter<MetrageAdapter.MetrageV
     public void onBindViewHolder(@NonNull MetrageViewHolder holder, int position) {
         MetrageModel metrage = metrages.get(position);
         holder.nomClientTextView.setText(metrage.getNomClient());
-        holder.dateMetrageTextView.setText(metrage.getDateMetrage() != null ? metrage.getDateMetrage().toString() : "N/A");
+
+        String date = metrage.getDateMetrage();
+        holder.dateMetrageTextView.setText(date.substring(8, 10) + "-" + date.substring(5, 7) + "-" + date.substring(0, 4));
 
         holder.editButton.setOnClickListener(v -> {
             // TODO
@@ -76,10 +80,10 @@ public class MetrageAdapter extends RecyclerView.Adapter<MetrageAdapter.MetrageV
         new AlertDialog.Builder(context)
                 .setTitle("Suppression")
                 .setMessage("Êtes-vous certain de vouloir supprimer ce métrage ?")
-                .setPositiveButton("Yes", (dialog, which) -> {
+                .setPositiveButton("Oui", (dialog, which) -> {
                     deleteMetrageById(id, position);
                 })
-                .setNegativeButton("No", null)
+                .setNegativeButton("Non", null)
                 .show();
     }
 

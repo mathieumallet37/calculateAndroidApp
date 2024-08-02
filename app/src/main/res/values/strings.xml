@@ -43,6 +43,9 @@
     <string name="date_metrage">Date métrage</string>
     <string name="action">Action</string>
 
+    //string variables for activity_liste_metrage.xml
+    <string name="date_ajout">Date d\'ajout</string>
+
     <string name="empty_enseigne">Aucune enseigne enregistrée</string>
     <string name="empty_metrage">Aucun métrage enregistré</string>
 

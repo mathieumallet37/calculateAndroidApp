@@ -19,7 +19,7 @@ public class MetrageRepository {
 
     public long addMetrage(String nomClient, String prenomClient, String adresseClient, String telephoneClient, String codePostalClient, String villeClient, String enseigne) {
         SQLiteDatabase db = dbHandler.getWritableDatabase();
-        LocalDate date = LocalDate.now();
+        String date = LocalDate.now().toString();
 
         ContentValues values = new ContentValues();
         values.put(DbHandler.NOM_CLIENT_COL, nomClient);
@@ -29,7 +29,7 @@ public class MetrageRepository {
         values.put(DbHandler.VILLE_CLIENT_COL, villeClient);
         values.put(DbHandler.TELEPHONE_CLIENT_COL, telephoneClient);
         values.put(DbHandler.ENSEIGNE_COL, enseigne);
-        values.put(DbHandler.DATE_METRAGE_COL, String.valueOf(date));
+        values.put(DbHandler.DATE_METRAGE_COL, date);
 
         long id = db.insert(DbHandler.METRAGE_TABLE_NAME, null, values);
         db.close();
@@ -38,7 +38,7 @@ public class MetrageRepository {
 
     public Cursor getAllMetrages() {
         SQLiteDatabase db = dbHandler.getReadableDatabase();
-        return db.rawQuery("SELECT " + DbHandler.ID_COL + "," + DbHandler.NOM_CLIENT_COL + "," + DbHandler.DATE_METRAGE_COL + " FROM " + DbHandler.METRAGE_TABLE_NAME, null);
+        return db.rawQuery("SELECT " + DbHandler.ID_COL + "," + DbHandler.NOM_CLIENT_COL + "," + DbHandler.DATE_METRAGE_COL + " FROM " + DbHandler.METRAGE_TABLE_NAME + " ORDER BY " + DbHandler.DATE_METRAGE_COL + " DESC ", null);
     }
 
     public void deleteMetrageById(long id) {
